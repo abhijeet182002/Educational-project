@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+
+<style>
+    #main{
+        width: 100%;
+        height: 40px;
+        background-color: blue;
+    }
+    #main ul{
+        display: inline-flex;
+    }
+    #main ul li{
+        list-style: none;
+    }
+    #main ul li a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-family: serif;
+        font-style: inherit;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+    /* #main ul li a span:hover{
+
+    } */
+    #nav{
+        background-color: silver;
+        width: 120px;
+        display: none;
+        margin-left: -110px;
+        height: auto;
+        margin-top: 25px;
+    }
+    #nav li a{
+        color: blue;
+    }
+    #btn{
+        width: 120px;
+        height: 34px;
+        margin-top: 3px;
+        margin-right: 25px;
+        border-radius: 15px;
+        background-color: yellowgreen;
+        float: right;
+    }
+    #btn a{
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+    }
+    #top{
+        width: 120px;
+        height: 34px;
+        margin-top: 3px;
+        margin-left: 25px;
+        border-radius: 15px;
+        background-color: yellowgreen;
+        float: left;
+    }
+    #top a{
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Media query */
+
+    @media screen and (max-width: 1130px) {
+        #main ul li a {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+    @media screen and (max-width: 1025px) {
+        #main ul li a {
+            display: none;
+        }
+        #top{
+            display: none;
+        }
+        #main ul li{
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        #img{
+            display: block;
+        }
+        input{
+            display: none;
+        }
+    }
+
+</style>
+<body>
+    <div id="main">
+        <input type="button" value="me">
+        <div id="top">
+            <center>
+            <a href="#">Log In</a>
+            </center>
+        </div>
+        <span id="img" style="display: none;">
+            <center>
+                <img src="logo.png" width="100" height="40">
+            </center>
+        </span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#"><span>Courses</span></a></li>
+                <div id="nav">
+                    <li><a href="#">Courses</a></li>
+                    <hr>
+                    <li><a href="#">Courses</a></li>
+                    <hr>
+                    <li><a href="#">Courses</a></li>
+                    <hr>
+                    <li><a href="#">Courses</a></li>
+                    <hr>
+                    <li><a href="#">Courses</a></li>
+                </div>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Testionaial</a></li>
+            <li><a href="#">Placement</a></li>
+            <li><a href="#">Requiters</a></li>
+            <li><a href="#">Contact</a></li>
+    </ul>
+    <div id="btn">
+        <center>
+        <a href="#">Log In</a>
+        </center>
+    </div>
+    </div>
+    
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("span").click(function(){
+                $("#nav").toggle();
+                // $("#nav").css('display','block');
+            })
+
+        });
+    </script>
+</body>
+</html>
